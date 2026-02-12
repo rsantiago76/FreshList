@@ -1,0 +1,50 @@
+name: Deploy Backend (AWS)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "backend/**"
+      - "infra/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install backend deps
+        working-directory: backend
+        run: npm ci
+
+      - name: Build + zip Lambda
+        working-directory: backend
+        run: node scripts/zip.mjs
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Terraform init
+        working-directory: infra
+        run: terraform init
+
+      - name: Terraform fmt/validate
+        working-directory: infra
+        run: |
+          terraform fmt -check
+          terraform validate
+
+      - name: Terraform apply
+        working-directory: infra
+        run: terraform apply -auto-approve
