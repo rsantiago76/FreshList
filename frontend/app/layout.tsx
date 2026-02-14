@@ -18,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={cn(inter.className, "bg-slate-950 text-slate-100 min-h-screen selection:bg-primary/20 selection:text-primary")}>
+      <body
+        className={cn(inter.className, "bg-slate-950 text-slate-100 min-h-screen selection:bg-primary/20 selection:text-primary")}
+        style={{ backgroundColor: "#020617", color: "#f1f5f9" }}
+      >
         <Navbar />
         <main className="container mx-auto px-4 py-8">
           {children}
