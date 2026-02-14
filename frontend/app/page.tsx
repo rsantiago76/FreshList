@@ -1,5 +1,5 @@
 import { Hero } from "@/components/landing/Hero";
-import { Features } from "@/components/landing/Features";
+import { FeatureCards } from "@/components/landing/FeatureCards";
 import { InteractiveDemo } from "@/components/landing/InteractiveDemo";
 import { StickyCTA } from "@/components/landing/StickyCTA";
 
@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Hero />
       <InteractiveDemo />
-      <Features />
+      <FeatureCards />
       <StickyCTA />
 
       {/* Simple Footer */}

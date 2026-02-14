@@ -109,27 +109,26 @@ function IconChart(props: React.SVGProps<SVGSVGElement>) {
     );
 }
 
-const FEATURES: Feature[] = [
-    {
-        title: "Smart Grocery Habits",
+{
+    title: "Smart Grocery Habits",
         description:
-            "Build lists that nudge you toward fresh, whole foods—without the guilt trip.",
+    "Build lists that nudge you toward fresh, whole foods—without the guilt trip.",
         icon: <IconCart className="h-6 w-6" />,
-        accent: "from-lime-400/60 via-emerald-400/40 to-sky-400/50",
+            accent: "from-lime-400 via-emerald-400 to-sky-400",
     },
-    {
-        title: "Instant Suggestions",
+{
+    title: "Instant Suggestions",
         description:
-            "Helpful swaps and add-ons that balance your cart in seconds.",
+    "Helpful swaps and add-ons that balance your cart in seconds.",
         icon: <IconSparkle className="h-6 w-6" />,
-        accent: "from-pink-400/60 via-orange-300/40 to-yellow-300/50",
+            accent: "from-pink-400 via-orange-300 to-yellow-300",
     },
-    {
-        title: "Weekly Insights",
+{
+    title: "Weekly Insights",
         description:
-            "See your fresh vs. processed ratio and small wins that compound over time.",
+    "See your fresh vs. processed ratio and small wins that compound over time.",
         icon: <IconChart className="h-6 w-6" />,
-        accent: "from-sky-400/60 via-cyan-300/40 to-teal-300/50",
+            accent: "from-sky-400 via-cyan-300 to-teal-300",
     },
 ];
 
@@ -150,7 +149,7 @@ export function FeatureCards() {
                         whileHover={{ y: -6, scale: 1.01 }}
                         whileTap={{ scale: 0.98 }}
                         transition={{ type: "spring", stiffness: 260, damping: 18 }}
-                        className="group relative overflow-hidden rounded-2xl border border-black/5 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5"
+                        className="group relative overflow-hidden rounded-2xl border border-black/5 bg-white/85 p-5 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5"
                     >
                         {/* animated gradient accent */}
                         <motion.div
@@ -160,6 +159,7 @@ export function FeatureCards() {
                             whileHover={{ opacity: 0.9, x: 30 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         />
+                        <div className="absolute inset-0 bg-white/0 group-hover:bg-white/40 transition-colors duration-300" />
 
                         {/* subtle glow ring */}
                         <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent transition group-hover:ring-black/10 dark:group-hover:ring-white/15" />
