@@ -2,6 +2,16 @@ provider "aws" {
   region = var.region
 }
 
+terraform {
+  backend "s3" {
+    bucket         = "freshlist-tf-state-996183507"
+    key            = "freshlist/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "freshlist-tf-lock"
+    encrypt        = true
+  }
+}
+
 locals {
   name = var.project
 }
