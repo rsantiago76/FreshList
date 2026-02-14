@@ -4,28 +4,38 @@
 
 @layer base {
   :root {
-    --background: 60 30% 98%;
-    /* Cream-50 #fbfbf2 */
+    /* More colorful, still premium */
+    --background: 60 60% 97%;
     --foreground: 222.2 84% 4.9%;
-    /* Slate-950 #020617 */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
-    --primary: 142 71% 45%;
-    /* Mint-500 #22c55e */
+    /* Fresher, brighter primary (mint/green) */
+    --primary: 145 75% 42%;
     --primary-foreground: 210 40% 98%;
 
-    --accent: 358 75% 59%;
-    /* Coral-400 #f87171 */
+    /* Keep your coral but push it slightly brighter */
+    --accent: 14 90% 60%;
     --accent-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142 71% 45%;
+    /* Add extra “color slots” you can use for UI chips/badges */
+    --secondary: 198 95% 45%;
+    /* sky/cyan */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 60 40% 93%;
+    --muted-foreground: 215.4 16.3% 40%;
+
+    --border: 214.3 31.8% 88%;
+    --input: 214.3 31.8% 88%;
+    --ring: 145 75% 42%;
+
+    /* Optional fun highlights */
+    --violet: 262 83% 58%;
+    --amber: 38 92% 55%;
   }
 
-  /* Optional Dark Mode (if needed later) */
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
