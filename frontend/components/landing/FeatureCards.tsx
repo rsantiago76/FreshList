@@ -109,26 +109,27 @@ function IconChart(props: React.SVGProps<SVGSVGElement>) {
     );
 }
 
-{
-    title: "Smart Grocery Habits",
+const FEATURES: Feature[] = [
+    {
+        title: "Smart Grocery Habits",
         description:
-    "Build lists that nudge you toward fresh, whole foods—without the guilt trip.",
+            "Build lists that nudge you toward fresh, whole foods—without the guilt trip.",
         icon: <IconCart className="h-6 w-6" />,
-            accent: "from-lime-400 via-emerald-400 to-sky-400",
+        accent: "from-lime-400 via-emerald-400 to-sky-400",
     },
-{
-    title: "Instant Suggestions",
+    {
+        title: "Instant Suggestions",
         description:
-    "Helpful swaps and add-ons that balance your cart in seconds.",
+            "Helpful swaps and add-ons that balance your cart in seconds.",
         icon: <IconSparkle className="h-6 w-6" />,
-            accent: "from-pink-400 via-orange-300 to-yellow-300",
+        accent: "from-pink-400 via-orange-300 to-yellow-300",
     },
-{
-    title: "Weekly Insights",
+    {
+        title: "Weekly Insights",
         description:
-    "See your fresh vs. processed ratio and small wins that compound over time.",
+            "See your fresh vs. processed ratio and small wins that compound over time.",
         icon: <IconChart className="h-6 w-6" />,
-            accent: "from-sky-400 via-cyan-300 to-teal-300",
+        accent: "from-sky-400 via-cyan-300 to-teal-300",
     },
 ];
 
