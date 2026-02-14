@@ -12,7 +12,7 @@ export default function Home() {
           <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
           Now in Public Beta
         </div>
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent drop-shadow-sm">
+        <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl text-white drop-shadow-sm">
           Healthy eating, <br />
           <span className="text-primary glow">simplified.</span>
         </h1>
