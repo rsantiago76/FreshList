@@ -46,8 +46,11 @@
 @layer base {
   body {
     @apply bg-cream-50 text-slate-900 antialiased;
-    background-image: none;
-    /* Remove dark radial gradient */
+    background:
+      radial-gradient(circle at 15% 20%, hsl(145 75% 42% / 0.18), transparent 55%),
+      radial-gradient(circle at 85% 30%, hsl(198 95% 45% / 0.14), transparent 55%),
+      radial-gradient(circle at 50% 90%, hsl(14 90% 60% / 0.12), transparent 60%),
+      hsl(var(--background));
     min-height: 100vh;
   }
 }
