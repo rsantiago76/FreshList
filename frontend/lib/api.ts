@@ -1,5 +1,7 @@
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3001"; // Fallback for dev
 
+console.log("API_BASE_URL configured as:", API_BASE_URL);
+
 export async function apiRequest(path: string, method: string = "GET", body?: any) {
   try {
     const options: RequestInit = {
