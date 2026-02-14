@@ -4,38 +4,44 @@
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 60 30% 98%;
+    /* Cream-50 #fbfbf2 */
+    --foreground: 222.2 84% 4.9%;
+    /* Slate-950 #020617 */
 
-    --card: 222.2 84% 6.9%;
-    /* Slightly lighter than bg */
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --primary: 191 97% 41%;
-    /* Cyan-400 equivalent */
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 71% 45%;
+    /* Mint-500 #22c55e */
+    --primary-foreground: 210 40% 98%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 358 75% 59%;
+    /* Coral-400 #f87171 */
     --accent-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 191 97% 41%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142 71% 45%;
+  }
+
+  /* Optional Dark Mode (if needed later) */
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... other dark vars ... */
   }
 }
 
 @layer base {
   body {
-    background-color: #020617;
-    /* Fallback for bg-slate-950 */
-    color: #f1f5f9;
-    /* Fallback for text-slate-100 */
-    @apply bg-slate-950 text-slate-100 antialiased;
-    background-image: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+    @apply bg-cream-50 text-slate-900 antialiased;
+    background-image: none;
+    /* Remove dark radial gradient */
     min-height: 100vh;
   }
 }
 
 .glassy {
-  @apply bg-slate-900/50 backdrop-blur-md border border-slate-800 shadow-xl;
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
 }
