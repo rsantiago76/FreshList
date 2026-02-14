@@ -26,6 +26,22 @@ const config: Config = {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
+                mint: {
+                    50: "#f0fdf4",
+                    100: "#dcfce7",
+                    500: "#22c55e",
+                },
+                lime: {
+                    400: "#a3e635",
+                },
+                coral: {
+                    400: "#f87171", // slightly softer red/coral
+                    500: "#ef4444",
+                },
+                cream: {
+                    50: "#fbfbf2",
+                    100: "#f7f7f0",
+                }
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
