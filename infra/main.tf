@@ -12,12 +12,24 @@ resource "aws_dynamodb_table" "app" {
   hash_key     = "PK"
   range_key    = "SK"
 
-  attribute { name = "PK" type = "S" }
-  attribute { name = "SK" type = "S" }
+  attribute { 
+    name = "PK" 
+    type = "S" 
+  }
+  attribute { 
+    name = "SK" 
+    type = "S" 
+  }
 
   # Optional GSI for time-based queries
-  attribute { name = "GSI1PK" type = "S" }
-  attribute { name = "GSI1SK" type = "S" }
+  attribute { 
+    name = "GSI1PK" 
+    type = "S" 
+  }
+  attribute { 
+    name = "GSI1SK" 
+    type = "S" 
+  }
 
   global_secondary_index {
     name            = "GSI1"
@@ -30,7 +42,10 @@ resource "aws_dynamodb_table" "app" {
 data "aws_iam_policy_document" "assume_lambda" {
   statement {
     actions = ["sts:AssumeRole"]
-    principals { type = "Service", identifiers = ["lambda.amazonaws.com"] }
+    principals { 
+      type = "Service" 
+      identifiers = ["lambda.amazonaws.com"] 
+    }
   }
 }
 
