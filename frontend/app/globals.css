@@ -121,53 +121,57 @@
   .btnPrimary {
     @apply bg-mint-500 font-bold hover:bg-mint-400 shadow-lg hover:shadow-mint-500/20 drop-shadow-md;
     color: #ffffff !important;
-  }
 
-  .btnGhost {
-    @apply text-white bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/30 shadow-lg backdrop-blur-md;
-  }
+    .btnSecondary {
+      @apply bg-white/5 text-white font-semibold border border-white/20 hover:bg-white/10 hover:border-white/40 backdrop-blur-sm shadow-md;
+      color: #ffffff !important;
+    }
 
-  .btnArrow {
-    @apply transition-transform group-hover:translate-x-1;
-  }
+    .btnGhost {
+      @apply text-white bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/30 shadow-lg backdrop-blur-md;
+    }
 
-  .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200;
-  }
+    .btnArrow {
+      @apply transition-transform group-hover:translate-x-1;
+    }
 
-  .hero .badge {
-    @apply bg-white/10 text-slate-300 border-white/10;
-  }
+    .badge {
+      @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200;
+    }
 
-  .pill {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-300 border border-slate-700;
-  }
+    .hero .badge {
+      @apply bg-white/10 text-slate-300 border-white/10;
+    }
 
-  .row {
-    @apply flex flex-wrap items-center gap-4;
-  }
+    .pill {
+      @apply inline-flex items-center px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-300 border border-slate-700;
+    }
 
-  .grid {
-    @apply grid gap-6;
-  }
+    .row {
+      @apply flex flex-wrap items-center gap-4;
+    }
 
-  .grid-3 {
-    @apply grid-cols-1 md:grid-cols-3;
-  }
+    .grid {
+      @apply grid gap-6;
+    }
 
-  .grid-2 {
-    @apply grid-cols-1 md:grid-cols-2;
-  }
+    .grid-3 {
+      @apply grid-cols-1 md:grid-cols-3;
+    }
 
-  .hr {
-    @apply h-px bg-slate-100 my-6;
-  }
+    .grid-2 {
+      @apply grid-cols-1 md:grid-cols-2;
+    }
 
-  .dot {
-    @apply w-2 h-2 rounded-full bg-mint-500;
-  }
+    .hr {
+      @apply h-px bg-slate-100 my-6;
+    }
 
-  .list {
-    @apply pl-5 list-disc space-y-2 text-slate-600 text-sm;
+    .dot {
+      @apply w-2 h-2 rounded-full bg-mint-500;
+    }
+
+    .list {
+      @apply pl-5 list-disc space-y-2 text-slate-600 text-sm;
+    }
   }
-}

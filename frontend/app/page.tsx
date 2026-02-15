@@ -54,7 +54,7 @@ export default function Home() {
               Try Demo
               <span className="btnArrow" aria-hidden>→</span>
             </Link>
-            <Link className="btn" href="/recruiter">
+            <Link className="btn btnSecondary" href="/recruiter">
               Recruiter View
             </Link>
             <Link className="btn btnGhost" href="/dashboard">
