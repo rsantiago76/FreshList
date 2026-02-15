@@ -99,7 +99,11 @@
   }
 
   .hero .p {
-    @apply text-slate-100 font-medium;
+    @apply text-white font-medium drop-shadow-md;
+  }
+
+  .hero .h1 {
+    @apply text-white drop-shadow-md;
   }
 
   .accentText {
