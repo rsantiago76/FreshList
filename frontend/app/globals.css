@@ -99,15 +99,19 @@
   }
 
   .hero .p {
-    @apply text-white font-medium drop-shadow-md;
+    @apply font-medium drop-shadow-md;
+    color: #ffffff !important;
   }
 
   .hero .h1 {
-    @apply text-white drop-shadow-md;
+    @apply drop-shadow-md;
+    color: #ffffff !important;
   }
 
   .accentText {
-    @apply text-mint-400;
+    color: #86efac !important;
+    /* mint-300 */
+    text-shadow: 0 4px 12px rgba(134, 239, 172, 0.5);
   }
 
   .btn {
