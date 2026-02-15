@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { LayoutDashboard } from "lucide-react";
 
 function FeatureCard({
   title,
@@ -57,6 +58,7 @@ export default function Home() {
               Recruiter View
             </Link>
             <Link className="btn btnGhost" href="/dashboard">
+              <LayoutDashboard size={16} />
               Dashboard
             </Link>
           </div>
