@@ -119,7 +119,8 @@
   }
 
   .btnPrimary {
-    @apply bg-mint-500 text-slate-900 hover:bg-mint-400 shadow-lg hover:shadow-mint-500/20;
+    @apply bg-mint-500 font-bold hover:bg-mint-400 shadow-lg hover:shadow-mint-500/20 drop-shadow-md;
+    color: #ffffff !important;
   }
 
   .btnGhost {
