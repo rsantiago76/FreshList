@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ArrowLeft } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -27,11 +29,20 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh]">
+    <div className="relative flex flex-col items-center justify-center min-h-[80vh]">
+      <div className="absolute top-0 left-0">
+        <Link href="/">
+          <Button variant="ghost" className="gap-2 text-slate-400 hover:text-white">
+            <ArrowLeft className="h-4 w-4" />
+            Home
+          </Button>
+        </Link>
+      </div>
+
       <Card className="w-full max-w-md border-slate-800 bg-slate-900/60 backdrop-blur-md">
         <CardHeader className="text-center space-y-2">
           <Badge variant="outline" className="w-fit mx-auto border-primary/50 text-primary">Demo Access</Badge>
-          <CardTitle className="text-2xl">Welcome Back</CardTitle>
+          <CardTitle className="text-2xl text-white">Welcome Back</CardTitle>
           <p className="text-sm text-slate-400">Enter your details to access your plan.</p>
         </CardHeader>
         <CardContent>
@@ -42,7 +53,7 @@ export default function LoginPage() {
                 placeholder="e.g. Alex"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="bg-slate-950/50 border-slate-800 focus:border-primary/50"
+                className="bg-slate-950/50 border-slate-800 focus:border-primary/50 text-white"
               />
             </div>
             <div className="space-y-2">
@@ -52,7 +63,7 @@ export default function LoginPage() {
                 placeholder="alex@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-slate-950/50 border-slate-800 focus:border-primary/50"
+                className="bg-slate-950/50 border-slate-800 focus:border-primary/50 text-white"
               />
             </div>
             {error && <p className="text-red-400 text-sm">{error}</p>}
