@@ -130,6 +130,7 @@
 
   .btnGhost {
     @apply text-white bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/30 shadow-lg backdrop-blur-md;
+    color: #ffffff !important;
   }
 
   .btnArrow {
