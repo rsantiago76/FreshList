@@ -99,7 +99,7 @@
   }
 
   .hero .p {
-    @apply text-slate-300;
+    @apply text-slate-100 font-medium;
   }
 
   .accentText {
